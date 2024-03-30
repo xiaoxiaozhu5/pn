@@ -17,6 +17,9 @@
 #include "ScintillaPixmaps.h"
 #endif
 
+#pragma comment(lib,"SciLexer.lib") 
+#pragma message("Automatically linking with SciLexer.lib")
+
 ///////////////////////////////////////////////////////////////////////////////
 // UndoGroup
 

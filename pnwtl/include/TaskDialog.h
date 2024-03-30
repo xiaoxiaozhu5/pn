@@ -289,6 +289,11 @@ inline int AtlTaskDialog(HWND hWndParent,
 #define TDT_SHIELD_ICON          MAKEINTRESOURCE(-4)
 
 #define IDI_SHIELD          MAKEINTRESOURCE(32518)
+#else
+#define TDT_WARNING_ICON         MAKEINTRESOURCE(-1)
+#define TDT_ERROR_ICON           MAKEINTRESOURCE(-2)
+#define TDT_INFORMATION_ICON     MAKEINTRESOURCE(-3)
+#define TDT_SHIELD_ICON          MAKEINTRESOURCE(-4)
 #endif
 
 inline int AtlTaskDialogIndirect(TASKDIALOGCONFIG* pTask, int* pnButton = NULL, int* pnRadioButton = NULL, BOOL* pfVerificationFlagChecked = NULL)

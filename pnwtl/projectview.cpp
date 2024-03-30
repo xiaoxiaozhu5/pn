@@ -651,7 +651,7 @@ void CProjectTreeCtrl::handleRemove()
 
 				if(pProject->IsDirty())
 				{
-					CT2CW name(pProject->GetName());
+					CString name = CT2CW(pProject->GetName());
 					CStringW msg;
 					msg.Format(IDS_QSAVEPROJBEFOREREMOVE, name);
 

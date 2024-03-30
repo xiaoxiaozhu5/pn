@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
-    <BoostFileVer>1_57</BoostFileVer>
-    <VSVer>VS2013</VSVer>
-    <VSNum>120</VSNum>
-    <BoostVer>1_57_0</BoostVer>
+    <BoostFileVer>1_84</BoostFileVer>
+    <VSVer>VS2022</VSVer>
+    <VSNum>143</VSNum>
+    <BoostVer>1_84_0</BoostVer>
     <PythonMagorVer>3</PythonMagorVer>
-    <PythonMinorVer>4</PythonMinorVer>
+    <PythonMinorVer>10</PythonMinorVer>
     <PythonVer>$(PythonMagorVer)$(PythonMinorVer)</PythonVer>
     <BoostPythonTag>$(PythonMagorVer).$(PythonMinorVer)</BoostPythonTag>
     <PythonFolder>C:\Python$(PythonVer)</PythonFolder>
     <PythonInclude>$(PythonFolder)\include</PythonInclude>
-    <ThirdPartyLibs>$(SolutionDir)..\..\lib</ThirdPartyLibs>
-    <WTLFolder>$(ThirdPartyLibs)\wtl\WTL90_4140_Final</WTLFolder>
-    <WTLSvnFolder>$(ThirdPartyLibs)\wtl\wtl-code\wtl</WTLSvnFolder>
-    <BoostFolder>$(ThirdPartyLibs)\boost\boost-$(BoostVer)</BoostFolder>
+    <ThirdPartyLibs>$(SolutionDir)..\lib</ThirdPartyLibs>
+    <WTLFolder>$(ThirdPartyLibs)\wtl\</WTLFolder>
+    <BoostFolder>$(ThirdPartyLibs)\</BoostFolder>
     <BoostInclude>$(BoostFolder)</BoostInclude>
   </PropertyGroup>
   <PropertyGroup>
@@ -22,11 +21,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(WTLFolder)\include;$(BoostInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WTLFolder);$(BoostInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WTLFolder)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WTLFolder);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -38,6 +37,6 @@
     </BuildMacro>
   </ItemGroup>
   <PropertyGroup Label="Configuration">
-    <PlatformToolset>v120_xp</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
   </PropertyGroup>
 </Project>
